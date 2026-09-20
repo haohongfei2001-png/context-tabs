@@ -3,17 +3,17 @@ repo: haohongfei2001-png/context-tabs
 canonical_branch: main
 source_of_truth: github_remote_main
 project_state: ACTIVE
-current_round: CT-01
+current_round: CT-02
 rounds:
   CT-00:
     title: Product/API freeze
     state: COMPLETE
   CT-01:
     title: Functional core
-    state: IN_PROGRESS
+    state: COMPLETE
   CT-02:
     title: Find and order
-    state: PLANNED
+    state: READY
   CT-03:
     title: Groups and display aliases
     state: PLANNED
