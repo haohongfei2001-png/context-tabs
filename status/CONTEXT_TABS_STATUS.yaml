@@ -1,0 +1,26 @@
+package: CONTEXT-TABS-v0.1
+repo: haohongfei2001-png/context-tabs
+canonical_branch: main
+source_of_truth: github_remote_main
+project_state: ACTIVE
+current_round: CT-01
+rounds:
+  CT-00:
+    title: Product/API freeze
+    state: COMPLETE
+  CT-01:
+    title: Functional core
+    state: READY
+  CT-02:
+    title: Find and order
+    state: PLANNED
+  CT-03:
+    title: Groups and display aliases
+    state: PLANNED
+  CT-04:
+    title: UX hardening and packaging
+    state: PLANNED
+  CT-05:
+    title: ChatGPT thread/tab adapter
+    state: PLANNED
+blocker: null
