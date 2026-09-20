@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Context Tabs",
+  "version": "0.1.0",
+  "description": "A compact side-panel tab manager with separate Web + and AI+ actions.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "tabs",
+    "sidePanel"
+  ],
+  "action": {
+    "default_title": "Open Context Tabs"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

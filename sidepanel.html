@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Context Tabs</title>
+  <link rel="stylesheet" href="styles/sidepanel.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="Context Tabs">
+      <span class="brand-mark" aria-hidden="true">◫</span>
+      <span class="brand-name">Tabs</span>
+    </div>
+    <div class="create-actions">
+      <button id="new-tab" class="icon-button" type="button" aria-label="New tab" title="New tab">+</button>
+      <button id="new-ai-tab" class="ai-button" type="button" aria-label="New ChatGPT tab" title="New ChatGPT tab">AI+</button>
+    </div>
+  </header>
+
+  <main>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <ul id="tab-list" class="tab-list" aria-label="Tabs in this window"></ul>
+  </main>
+
+  <template id="tab-template">
+    <li class="tab-row">
+      <button class="tab-activate" type="button">
+        <span class="favicon-shell" aria-hidden="true">
+          <img class="favicon" alt="">
+          <span class="favicon-fallback">•</span>
+        </span>
+        <span class="tab-title"></span>
+      </button>
+      <button class="tab-close" type="button" aria-label="Close tab" title="Close tab">×</button>
+    </li>
+  </template>
+
+  <script type="module" src="src/sidepanel.js"></script>
+</body>
+</html>

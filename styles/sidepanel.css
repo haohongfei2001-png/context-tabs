@@ -1,0 +1,182 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --border: color-mix(in srgb, currentColor 14%, transparent);
+  --muted: color-mix(in srgb, currentColor 62%, transparent);
+  --hover: color-mix(in srgb, currentColor 8%, transparent);
+  --active: color-mix(in srgb, currentColor 13%, transparent);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 220px;
+  background: Canvas;
+  color: CanvasText;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  background: Canvas;
+}
+
+.brand,
+.create-actions {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 7px;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.brand-mark {
+  font-size: 16px;
+}
+
+.create-actions {
+  gap: 6px;
+}
+
+.icon-button,
+.ai-button,
+.tab-close,
+.tab-activate {
+  border: 0;
+  background: transparent;
+}
+
+.icon-button,
+.ai-button {
+  min-height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icon-button {
+  width: 32px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ai-button {
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.icon-button:hover,
+.ai-button:hover,
+.tab-close:hover,
+.tab-activate:hover {
+  background: var(--hover);
+}
+
+.status {
+  margin: 8px 10px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tab-list {
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+}
+
+.tab-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px;
+  align-items: center;
+  min-height: 38px;
+  border-radius: 8px;
+}
+
+.tab-row.is-active {
+  background: var(--active);
+}
+
+.tab-activate {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  height: 38px;
+  padding: 0 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.favicon-shell {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  place-items: center;
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+}
+
+.favicon-fallback {
+  color: var(--muted);
+}
+
+.tab-title {
+  overflow: hidden;
+  min-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.is-pinned .tab-title::before {
+  content: "• ";
+  color: var(--muted);
+}
+
+.tab-close {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.tab-close:hover {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .icon-button,
+  .ai-button,
+  .tab-close,
+  .tab-activate {
+    transition: background-color 100ms ease;
+  }
+}

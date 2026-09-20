@@ -10,7 +10,7 @@ rounds:
     state: COMPLETE
   CT-01:
     title: Functional core
-    state: READY
+    state: IN_PROGRESS
   CT-02:
     title: Find and order
     state: PLANNED
